@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript基础知识练习</title>
+</head>
+<body>
+    <h1>JavaScript基础知识练习</h1>
+    <p>请按F12打开浏览器控制台查看运行结果</p >
+
+    <script>
+        // ===================== 1. 变量的定义 =====================
+        // let：可变变量，const：不可变常量（推荐优先用const）
+        let userName = "张三"; // 可变变量
+        let userAge = 20;
+        const PI = 3.1415926; // 常量，不可修改
+        console.log("=== 1. 变量定义 ===");
+        console.log("用户名：", userName, "年龄：", userAge, "圆周率：", PI);
+
+        // ===================== 2. 变量类型 =====================
+        console.log("\n=== 2. 变量类型 ===");
+        // 字符串类型
+        let str = "Hello JavaScript";
+        // 数值类型
+        let num = 100;
+        // 布尔类型
+        let isStudent = true;
+        // null类型（空值）
+        let emptyValue = null;
+        // undefined类型（未定义）
+        let undefinedValue;
+        // 对象类型
+        let userInfo = { name: "张三", age: 20 };
+        // 数组类型
+        let hobbyList = ["阅读", "编程", "运动"];
+
+        // 打印类型验证
+        console.log("字符串类型：", typeof str, "值：", str);
+        console.log("数值类型：", typeof num, "值：", num);
+        console.log("布尔类型：", typeof isStudent, "值：", isStudent);
+        console.log("null类型：", typeof emptyValue, "值：", emptyValue);
+        console.log("undefined类型：", typeof undefinedValue, "值：", undefinedValue);
+        console.log("对象类型：", typeof userInfo, "值：", userInfo);
+        console.log("数组类型：", typeof hobbyList, "值：", hobbyList);
+
+        // ===================== 3. 表达式与运算符 =====================
+        console.log("\n=== 3. 表达式与运算符 ===");
+        // 算术运算符
+        let a = 10, b = 3;
+        console.log("算术运算：", a + b, a - b, a * b, a / b, a % b, a ** b);
+        // 赋值运算符
+        let c = 5;
+        c += 2; // 等价于 c = c + 2
+        console.log("赋值运算 c += 2 结果：", c);
+        // 比较运算符
+        console.log("比较运算：", a > b, a === 10, b !== 3);
+        // 逻辑运算符
+        console.log("逻辑运算：", a > 5 && b < 5, a > 10 || b < 5, !isStudent);
+
+        // ===================== 4. 流程控制 =====================
+        console.log("\n=== 4. 流程控制 ===");
+        // 条件判断：if-else
+        let score = 85;
+        if (score >= 90) {
+            console.log("成绩等级：优秀");
+        } else if (score >= 80) {
+            console.log("成绩等级：良好");
+        } else if (score >= 60) {
+            console.log("成绩等级：及格");
+        } else {
+            console.log("成绩等级：不及格");
+        }
+
+        // 循环：for循环
+        console.log("for循环打印1-5：");
+        for (let i = 1; i <= 5; i++) {
+            console.log(i);
+        }
+
+        // 循环：while循环
+        console.log("while循环打印1-3：");
+        let i = 1;
+        while (i <= 3) {
+            console.log(i);
+            i++;
+        }
+
+        // ===================== 5. 函数 =====================
+        console.log("\n=== 5. 函数 ===");
+        // 普通函数定义
+        function greet(name) {
+            return `你好，${name}！`;
+        }
+        // 箭头函数（ES6+）
+        const add = (x, y) => x + y;
+
+        // 函数调用
+        console.log("普通函数调用：", greet("张三"));
+        console.log("箭头函数调用：", add(10, 20));
+
+        // 带默认参数的函数
+        function sayHello(name = "访客") {
+            console.log(`欢迎你，${name}！`);
+        }
+        sayHello();
+        sayHello("李四");
+    </script>
+</body>
+</html>
